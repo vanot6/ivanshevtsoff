@@ -20,44 +20,24 @@
   <meta property="fb:admins" content="i.shevtsoff"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Ivan Shevtsoff – Simultaneous Interpreter &amp; Translator Specializing in German, Russian, and English"/>
-  <meta name="twitter:description" content="Ivan Shevtsoff – Experienced Simultaneous Interpreter &amp; Translator specializing in legal, medical, and technical fields in German, Russian, and English."/>
+  <meta name="twitter:description" content="Ivan Shevtsoff – Simultaneous Interpreter &amp; Translator specializing in legal, medical, and technical German, Russian, and English."/>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #111;
+    padding-top: 2.5rem; /* место для top-bar */
+  }
 
 
-  <style>
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 2rem;
-      background: #ffffff;
-      color: #111;
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .header-left {
-      flex: 1 1 auto;
-      min-width: 340px;
-    }
-    .header-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-    .header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
+
     .social-icons {
   display: flex;
   justify-content: center;
@@ -93,59 +73,173 @@
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.25rem;
     }
-    .contact {
-      margin-bottom: 2rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 0.4rem;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    .label {
-      font-weight: bold;
-    }
-    @media (max-width: 600px) {
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .header-right {
-        align-items: flex-start;
-      }
-    }
-    .separator {
-  margin: 0 0.5rem;
-  color: #111;
-}
-    .current {
-  margin: 0 0.5rem;
-  color: grey;
+
+
+
+
+
+  .contact-modern {
+    background: #f0f0f0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  .contact-modern h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+  }
+  .contact-modern .contact-lead {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  .contact-modern ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  .contact-modern li {
+    margin-bottom: 0.4rem;
+  }
+  .contact-modern a {
+    color: #111;
+    text-decoration: none;
+  }
+  .contact-modern a:hover {
+    text-decoration: underline;
+  }
+  .btn-book-meeting {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: #fff !important;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .btn-book-meeting:hover {
+    background-color: #218838;
+  }
+  .contact-alt {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .form-toggle summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .contact-form {
+    margin-top: 0.5rem;
+  }
+  .contact-form label {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .contact-form button {
+    margin-top: 0.7rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    background: #111;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .contact-form button:hover {
+    background: #333;
+  }
+  #my-form-status {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+
+
+
+
+  .top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #000;
+  color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
 }
 
-  </style>
+.top-bar-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.top-bar-right .current {
+  position: relative;
+}
+
+  .top-bar-left {
+    font-weight: light;
+  }
+  .top-bar-right a {
+    color: #eee;
+    text-decoration: none;
+    margin: 0 0.3rem;
+  }
+  .top-bar-right a:hover {
+    text-decoration: underline;
+  }
+  .separator, .current {
+    color: #888;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-  <div class="header">
-
-    <div class="header-left">
-      <h1>Ivan Shevtsov</h1>
-
-    </div>
-    <div class="header-right">
-
-      <div class="download-link">
-
-<a href="/ru/" style="margin-right: 10px; text-decoration: none; color: #111;">Русский</a><span class="separator">|</span><a href="/de/" style="text-decoration: none; color: #111;">Deutsch</a><span class="separator">|</span><span class="current">English</span>
-      </div>
-    </div>
+<div class="top-bar">
+  <div class="top-bar-left">Home page</div>
+  <div class="top-bar-right">
+    <a href="/ru/">Русский</a>
+    <span class="separator">|</span>
+    <a href="/de/">Deutsch</a>
+    <span class="separator">|</span>
+    <span class="current">English</span>
   </div>
+</div>
 
-  <p class="contact">
+<div class="container">
+
+  <h1>Ivan Shevtsov</h1>
+<p class="contact">
   Simultaneous Interpreter & Translator – Russian | German | English<br>
 <i class="bi bi-geo-alt-fill" style="font-size: 16px; vertical-align: middle; filter: grayscale(100%); margin-right: 6px;"></i>
 Frankfurt region, Germany<br>
@@ -161,27 +255,24 @@ Frankfurt region, Germany<br>
 </script>
 
 
-  <div class="section">
-    <h2>Profile</h2>
+
+  <h2>Profile</h2>
     <p>Conference interpreter and translator with over 20 years of international experience across Europe, Russia and Asia. Specializing in high-level simultaneous interpretation for conferences, corporate meetings, legal, technical, and medical symposia. Trusted long-term partner to Siemens, Philips, GE, the UN, EU institutions, international sports federations, and major pharmaceutical groups. Fluent in German, Russian, and English. Based near Frankfurt, available for on-site and remote work.</p>
-  </div>
 
-  <div class="section">
-    <h2>Core Expertise</h2>
+
+    <h2>What can I do for you</h2>
     <ul>
-      <li>Simultaneous and consecutive interpretation</li>
-      <li>Certified translation (DE–RU–EN)</li>
-      <li>Legal, medical & technical translation</li>
-      <li>RSI (Zoom, Teams, Interprefy, KUDO, Webex)</li>
-      <li>Multilingual event support & moderation</li>
-      <li>Transcreation & content localization</li>
-      <li>Terminology management and glossaries</li>
-      <li>Voiceover scripts & subtitle translation</li>
+      <li>Simultaneous interpretation & Consecutive interpretation</li>
+      <li>Certified translations</li>
+      <li>Remote interpretation (Zoom, Teams, Interprefy, KUDO, Webex)</li>
+      <li>Assembling and coordinating interpreter teams</li>
+      <li>Content localization</li>
+      <li>Terminology management & Glossaries</li>
+      <li>Voiceover & subtitling</li>
     </ul>
-  </div>
 
-  <div class="section">
-    <h2>Selected Projects & Assignments</h2>
+
+    <h2>Done</h2>
     <ul>
       <li>UNODC “Civil Society Forum” at COSP UNCAC (Vienna)</li>
       <li>IIHF Semi-Annual Congress (Athens)</li>
@@ -197,10 +288,10 @@ Frankfurt region, Germany<br>
       <li>Kimberly-Clark Annual Meeting (Mexico City)</li>
       <li>St. Petersburg International Economic Forum (St. Petersburg)</li>
     </ul>
-  </div>
 
-  <div class="section">
-    <h2>Professional Experience</h2>
+
+
+    <h2>My Roles</h2>
     <p><span class="label">Freelance Conference Interpreter & Translator</span><br>Europe & Asia | 2003–present</p>
     <ul>
       <li>500+ days of interpretation at high-profile events</li>
@@ -218,72 +309,99 @@ Frankfurt region, Germany<br>
       <li>Coordination of multilingual project communication</li>
       <li>Factory audits, QA, safety training interpretation</li>
     </ul>
-  </div>
 
-  <div class="section">
-    <h2>Education & Training</h2>
+    <h2>Education</h2>
     <ul>
       <li>University of Heidelberg – M.A. in Conference Interpreting (ongoing) | 2024–</li>
       <li>Rostov State University – Magister in German Philology & Translation | 2000–2005</li>
       <li>University of Potsdam – Exchange in Sociolinguistics & Translation | 2002–2003</li>
     </ul>
-  </div>
 
-  <div class="section">
-    <h2>Languages</h2>
-    <ul>
-      <li>Russian – C2</li>
-      <li>German – C2</li>
-      <li>English – C2</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Tools & Platforms</h2>
+    <h2>Tools</h2>
     <ul>
       <li>SDL Trados, MemoQ, Smartcat, Memsource, omegaT</li>
-      <li>RSI: Interprefy, Zoom, Teams, KUDO, Webex</li>
-      <li>Audio: Adobe Audition, iZotope</li>
+      <li>Interprefy, Zoom, MS Teams, KUDO, Webex, Sennheiser SC 660</li>
+      <li>Audio: Adobe Audition, iZotope, Rode USB</li>
       <li>MS Office, Google Workspace</li>
     </ul>
-  </div>
 
-  <div class="section">
     <h2>Availability</h2>
-    <ul>
-      <li>Willing to travel and available on short notice.</li>
-      <li>Operating from Germany (Frankfurt region) and Malaysia (Kuala Lumpur).</li>
-      <li>Remote and on-site assignments welcome</li>
-    </ul>
+    <p>
+My schedule’s usually packed with events in Europe, Asia-Pacific, and the Middle East. Short-notice assignments are still possible. Shoot me the date and time of your event, and I’ll let you know right away. If I am already booked, I'll be happy to recommend  top-notch colleagues. Remote simultaneous interpretation is always an option too.
+    </p>
+
+
+
+
+
+<footer style="margin-top: 3rem; text-align: center;">
+
+  <section id="contact" class="contact-modern">
+    <div class="contact-block">
+      <h2 class="contact-headline">Have a project in mind?</h2>
+      <p class="contact-lead">
+        Give me a call — or drop an email. I’ll get back to you asap.
+      </p>
+
+      <ul class="contact-info">
+        <li><i class="bi bi-envelope-fill" style="font-size: 16px; vertical-align: middle; filter: grayscale(100%); margin-right: 6px;"></i> <span id="email-container-footer"></span></li>
+        <li><i class="bi bi-telephone" style="font-size: 16px; vertical-align: middle; filter: grayscale(100%); margin-right: 6px;"></i> <a href="tel:+4915756364745">+49 157 5636 4745</a></li>
+      </ul>
+
+      <a href="https://calendly.com/ishevtsoff/30min" target="_blank" class="btn-book-meeting">Book a 30-min meeting</a>
+      <p class="contact-alt">… or contact me via </p>
+
+      <details class="form-toggle">
+        <summary>contact form</summary>
+        <form id="my-form" action="https://formspree.io/f/mkgjvkon" method="POST" class="contact-form">
+          <label for="email">Your Email</label>
+          <input type="email" name="email" id="email" required />
+
+          <label for="message">Your Message</label>
+          <textarea name="message" id="message" rows="5" required></textarea>
+
+          <button id="my-form-button" class="send-btn">Send</button>
+          <p id="my-form-status"></p>
+        </form>
+      </details>
+
+      <p style="margin-top: 1rem; font-weight: bold;">I, social:</p>
+      <div class="social-icons" style="margin-top: 0.5rem;">
+        <a href="https://www.linkedin.com/in/ivanshevtsoff/" title="LinkedIn" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://www.facebook.com/i.shevtsoff" title="Facebook" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/ivaninterpreter/" title="Instagram" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://wa.me/4368110431822" title="WhatsApp" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://t.me/+4915756364745" title="Telegram" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" alt="Telegram">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div style="font-size: 0.7rem; color: #777; margin-top: 1rem;">
+    © Ivan Shevtsov, All rights reserved
   </div>
 
-
-  <footer style="margin-top: 3rem; text-align: center;">
-      <div class="social-icons">
-  <a href="https://www.linkedin.com/in/ivanshevtsoff/" title="LinkedIn" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn">
-  </a>
-  <a href="https://www.facebook.com/i.shevtsoff" title="Facebook" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook">
-  </a>
-  <a href="https://www.instagram.com/ivaninterpreter/" title="Instagram" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
-  </a>
-  <a href="https://wa.me/4368110431822" title="WhatsApp" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp">
-  </a>
-  <a href="https://t.me/+4915756364745" title="Telegram" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" alt="Telegram">
-  </a>
+  <script>
+    const userFooter = "i.shevtsoff";
+    const domainFooter = "gmail.com";
+    document.getElementById("email-container-footer").innerHTML = `<a href="mailto:${userFooter}@${domainFooter}">${userFooter}@${domainFooter}</a>`;
+  </script>
+</footer>
 </div>
-   <div class="download-link" style="margin-top: 1rem; font-size: 0.9rem;">
- 
-        <a href="./Ivan_Shevtsov_Interpreter_CV.pdf" download>Download as PDF</a>
-    </div>
-    <div style="font-size: 0.7rem; color: #777; margin-top: 1rem;">
-      © Ivan Shevtsov, All rights reserved
-    </div>
-  </footer>
 
+<script>
+  const user = "i.shevtsoff";
+  const domain = "gmail.com";
+  document.getElementById("email").innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+</script>
 </body>
 </html>
