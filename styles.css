@@ -339,6 +339,21 @@ background-size: 130px 35px;
   .lang-row { padding: 0.19rem 1rem 0.33rem 1rem; }
 }
 
+
+@media (max-width: 650px) {
+  .nav-row {
+    padding: 0.4rem 0.6rem !important;
+    max-width: 100vw;
+  }
+  .brand {
+    font-size: 1rem;
+  }
+  .burger {
+    margin-left: 0.5rem;
+  }
+}
+
+
 /* DARK MODE */
 
 
