@@ -1,0 +1,202 @@
+<header class="apple-header">
+<style>
+.apple-header {
+  width: 100%;
+  background: var(--topbar-bg, #fff);
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.apple-nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+  padding: 0 1.2rem;
+  position: relative;
+}
+
+.apple-brand img {
+  height: 38px;
+  display: block;
+}
+
+#apple-burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  z-index: 10001;
+}
+.apple-bar {
+  width: 27px;
+  height: 3.5px;
+  background: #222;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.24s;
+}
+#apple-burger.open .apple-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#apple-burger.open .apple-bar:nth-child(2) {
+  opacity: 0;
+}
+#apple-burger.open .apple-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Apple Mobile Menu */
+.apple-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 84vw;
+  max-width: 360px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -3px 0 30px rgba(0,0,0,0.16);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.28s cubic-bezier(.77,0,.18,1), opacity 0.18s;
+}
+.apple-mobile-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.apple-mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 3.2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+.apple-mobile-menu ul li a,
+.apple-mobile-menu ul li button {
+  display: block;
+  font-size: 1.42rem;
+  font-weight: 500;
+  color: #222;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0.5rem 2.1rem;
+  cursor: pointer;
+}
+.apple-mobile-lang {
+  font-size: 1.16rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  text-align: left;
+}
+.apple-mobile-dark {
+  padding-bottom: 1rem;
+}
+
+/* Overlay */
+.apple-menu-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(40,40,55,0.54);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s;
+}
+.apple-menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hide desktop nav at mobile widths */
+@media (max-width: 900px) {
+  .apple-header { min-height: 58px; }
+  .apple-nav-row { height: 58px; }
+  /* Hide your desktop nav/menu here */
+}
+@media (min-width: 901px) {
+  .apple-mobile-menu,
+  .apple-menu-overlay,
+  #apple-burger { display: none !important; }
+}
+</style>
+
+  <div class="apple-nav-row">
+    <a href="/" class="apple-brand"><img src="logo.svg" alt="Ivan Shevtsoff Logo"></a>
+    <button id="apple-burger" aria-label="Menu" aria-expanded="false">
+      <span class="apple-bar"></span>
+      <span class="apple-bar"></span>
+      <span class="apple-bar"></span>
+    </button>
+  </div>
+  <nav class="apple-mobile-menu" id="apple-mobile-menu" tabindex="-1">
+    <ul>
+      <li><a href="#trusted">Clients</a></li>
+      <li><a href="#about">Meet Ivan</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#video-demos">Videos</a></li>
+      <li><a href="#contact">Book Me</a></li>
+      <li class="apple-mobile-lang">
+        <a href="/ru/">Русский</a> | <a href="/de/">Deutsch</a>
+      </li>
+      <li class="apple-mobile-dark"><button id="apple-dark-toggle">🌙 / ☀️</button></li>
+    </ul>
+  </nav>
+  <div class="apple-menu-overlay" id="apple-menu-overlay"></div>
+</header>
+
+
+
+<script>
+
+const burger = document.getElementById('apple-burger');
+const mobileMenu = document.getElementById('apple-mobile-menu');
+const overlay = document.getElementById('apple-menu-overlay');
+
+// Toggle menu on burger click
+burger.addEventListener('click', function(e) {
+  e.stopPropagation();
+  burger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  overlay.classList.toggle('open');
+  burger.setAttribute('aria-expanded', mobileMenu.classList.contains('open') ? 'true' : 'false');
+  // Optional: lock body scroll
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+
+// Click overlay closes menu
+overlay.addEventListener('click', function() {
+  burger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+});
+
+// Close menu on link click
+document.querySelectorAll('.apple-mobile-menu a, .apple-mobile-menu button').forEach(link => {
+  link.addEventListener('click', () => {
+    burger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+</script>
