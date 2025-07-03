@@ -1,146 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark"> <!-- Default theme is dark, JS can adjust -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms & Conditions – Ivan Shevtsoff</title>
-  <link rel="stylesheet" href="../styles_l.css" />
-  <style>
-    .terms-main {
-      max-width: 690px;
-      margin: 0 auto;
-      padding: 0 1.6rem 3rem 1.6rem;
-    }
-    .terms-title {
-      font-size: 2.3rem;
-      font-weight: 700;
-      margin-bottom: 1.9rem;
-      color: #22214b;
-      letter-spacing: 0.01em;
-      line-height: 1.23;
-      border-left: 5px solid #3200c4;
-      padding-left: 1.08rem;
-    }
-    .terms-block {
-      margin-bottom: 2.1rem;
-    }
-    .terms-block h2, .terms-block h3 {
-      font-size: 1.22rem;
-      margin-top: 2.1rem;
-      margin-bottom: 0.85rem;
-      font-weight: 700;
-      color: #111056;
-    }
-    .terms-block p, .terms-block ul {
-      font-size: 1.07rem;
-      line-height: 1.7;
-      color: #22214b;
-      margin-bottom: 1.3rem;
-    }
-    .terms-block ul {
-      margin-left: 1.3em;
-      padding-left: 0;
-      list-style: disc;
-    }
-    @media (max-width: 700px) {
-      .terms-main { padding: 0 0.7rem 2rem 0.7rem; }
-      .terms-title { font-size: 1.6rem; padding-left: 0.7rem; }
-      .terms-block h2, .terms-block h3 { font-size: 1.1rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <title>Terms & Conditions - Ivan Shevtsoff</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Light Theme */
+            --bg-color: #ffffff;
+            --surface-color: #f7f7f7;
+            --primary-text-color: #1a1a1a;
+            --secondary-text-color: #555555;
+            --accent-color: #007aff;
+            --border-color: #e5e5e5;
+        }
+
+        [data-theme="dark"] {
+            /* Dark Theme */
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-text-color: #ffffff;
+            --secondary-text-color: #a0a0a0;
+            --accent-color: #ffd700;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-text-color);
+            line-height: 1.7;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1, h2 {
+            font-weight: 700;
+            line-height: 1.3;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            color: var(--primary-text-color);
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 1.8rem; }
+
+        p {
+            margin-bottom: 1em;
+            color: var(--secondary-text-color);
+        }
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        ul {
+            list-style-position: inside;
+            padding-left: 1em;
+            margin-bottom: 1em;
+        }
+        
+        li {
+            margin-bottom: 0.5em;
+            color: var(--secondary-text-color);
+        }
+        
+        strong {
+            color: var(--primary-text-color);
+            font-weight: 600;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+        
+        .disclaimer {
+            background-color: var(--surface-color);
+            border-left: 4px solid var(--accent-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-  <header class="impressum-header">
-    <div class="brand-left">
-      <a href="/" class="brand">Ivan Shevtsoff</a>
-    </div>
-  </header>
-  <main class="terms-main">
-    <section class="terms-content">
-      <h1 class="terms-title">Terms & Conditions</h1>
-      <div class="terms-block">
 
-        <h2>1. Scope of Services</h2>
-        <p>
-          These Terms & Conditions (“Terms”) govern all interpreting and translation services (“Services”) provided by Ivan Shevtsoff (“Service Provider”) to the client (“Client”). By commissioning Services, the Client accepts these Terms.
-        </p>
+    <div class="container">
+        <header class="header">
+            <h1>General Terms and Conditions</h1>
+            <p>Last Updated: July 3, 2025]</p>
+            <a href="/">← Back to Homepage</a>
+        </header>
+        
 
-        <h2>2. Offers, Quotes & Orders</h2>
+        <h2>1. Scope and Applicability</h2>
+        <p>These General Terms and Conditions apply to all business relations between <strong>Ivan Shevtsov</strong> ("the Interpreter") and the client ("the Client") for all interpreting, translation, and related language services ("Services"). Any conflicting or differing terms and conditions of the Client shall not be recognized unless the Interpreter has expressly agreed to them <strong>in writing</strong>.</p>
+
+        <h2>2. Quotations and Conclusion of Contract</h2>
+        <p>All quotations issued by the Interpreter are non-binding until a contract is concluded. A binding contract is formed only upon the Client's written confirmation (email is sufficient) of the Interpreter's offer. The scope of services and the agreed fee are defined in the written confirmation.</p>
+
+        <h2>3. Client's Duty to Cooperate</h2>
+        <p>The quality of the interpreting service is highly dependent on the preparatory materials provided by the Client. The Client shall, at their own expense and without being asked, provide the Interpreter with all necessary information and documentation required for the preparation of the assignment. This includes, but is not limited to:</p>
         <ul>
-          <li>All offers and price quotes are non-binding unless expressly stated otherwise.</li>
-          <li>Assignments are confirmed via email or in writing. Verbal arrangements are valid only if confirmed in writing.</li>
+            <li>The agenda, speaker lists, minutes of previous meetings, and relevant reports.</li>
+            <li>Presentations, speeches, or manuscripts in their final version.</li>
+            <li>Glossaries, terminology lists, and internal style guides.</li>
+            <li>For Remote Simultaneous Interpreting (RSI), access to the event platform and a technical briefing.</li>
         </ul>
+        <p>These materials should be provided no later than <strong>14 calendar days</strong> prior to the assignment. Failure to provide adequate materials may affect the quality of the service, for which the Interpreter cannot be held liable.</p>
 
-        <h2>3. Performance of Services</h2>
-        <ul>
-          <li>Services are delivered professionally and to the best of my knowledge and ability, in accordance with industry standards (ISO 17100, AIIC Code where applicable).</li>
-          <li>For interpreting assignments, the Client must provide all necessary reference materials, event information, and technical requirements in advance.</li>
-          <li>For translations, clear and legible source material must be provided. Translations are delivered in the agreed format.</li>
-        </ul>
+        <h2>4. Fees and Payment Terms</h2>
+        <p>Fees are calculated based on the quotation and are typically based on a full-day or half-day rate. A full day consists of up to 8 hours, including breaks. A half-day consists of up to 4 hours. Overtime will be charged at a pre-agreed hourly rate.</p>
+        <p>Unless otherwise agreed, travel costs, accommodation, and per diems shall be borne by the Client. All fees are quoted exclusive of any applicable value-added tax (VAT) or sales tax.</p>
+        <p>Invoices are due for payment without deduction within <strong>5 days</strong> of the invoice date. In case of late payment, the Interpreter is entitled to charge statutory interest on the outstanding amount.</p>
 
-        <h2>4. Deadlines & Delays</h2>
+        <h2>5. Cancellation Policy</h2>
+        <p>If the Client cancels a confirmed assignment, the following cancellation fees will apply, calculated on the basis of the agreed-upon fee for the interpreting service (excluding travel and expenses):</p>
         <ul>
-          <li>Deadlines are binding only if expressly confirmed in writing.</li>
-          <li>In the event of force majeure (illness, strikes, technical failure, etc.), Service Provider shall notify the Client without delay and propose an alternative solution where possible.</li>
+            <li>Cancellation more than 30 days before the assignment: <strong>No fee</strong>.</li>
+            <li>Cancellation between 30 and 15 days before the assignment: <strong>50% of the agreed fee</strong>.</li>
+            <li>Cancellation fewer than 15 days before the assignment: <strong>100% of the agreed fee</strong>.</li>
         </ul>
+        <p>The Client retains the right to prove that the Interpreter has incurred lesser or no damages. Any travel or accommodation costs already incurred and non-refundable at the time of cancellation shall be reimbursed in full by the Client.</p>
 
-        <h2>5. Confidentiality & Data Protection</h2>
-        <ul>
-          <li>All project information, documents, and communications are treated as strictly confidential and used solely for the fulfillment of the assignment.</li>
-          <li>Confidentiality extends to any colleagues or subcontractors involved, who are also bound by equivalent agreements.</li>
-          <li>Data is processed in compliance with the EU General Data Protection Regulation (GDPR) and relevant U.S. data privacy laws. See the <a href="privacy.html">Privacy Policy</a> for full details.</li>
-        </ul>
+        <h2>6. Confidentiality</h2>
+        <p>The Interpreter shall treat all information and documents received from the Client in connection with the assignment as strictly confidential. This duty of confidentiality extends beyond the termination of the contract. This does not apply to information that is already in the public domain.</p>
 
-        <h2>6. Fees, Invoicing & Payment</h2>
-        <ul>
-          <li>All fees and payment terms are specified in the offer or order confirmation. Unless otherwise agreed, payment is due within 14 days of invoice date, without deductions.</li>
-          <li>For large or multi-day assignments, advance or staged payments may be required.</li>
-          <li>All fees are net of VAT. VAT is applied if legally required (in accordance with German, EU or local tax law).</li>
-        </ul>
-
-        <h2>7. Intellectual Property & Copyright</h2>
-        <ul>
-          <li>Copyright and usage rights for translations or any deliverables transfer to the Client only after full payment of all fees.</li>
-          <li>Simultaneous interpreting is a transient service and not subject to recording, broadcasting, or further use without prior written agreement and appropriate licensing.</li>
-        </ul>
+        <h2>7. Copyright and Recordings</h2>
+        <p>The interpreting service is intended for immediate listening only. Any recording or broadcast of the interpretation, whether for audio, video, or data storage, requires the prior written consent of the Interpreter. Such consent may be subject to a separate usage fee.</p>
+        <p>The copyright for any translations of documents prepared by the Interpreter remains with the Interpreter until full payment has been received. The Client is granted a non-exclusive, perpetual license to use the translation for the agreed purpose.</p>
 
         <h2>8. Liability</h2>
+        <p>The Interpreter undertakes to perform all services to the best of their knowledge and ability. However, the Interpreter shall only be liable for damages caused by <strong>gross negligence or willful misconduct</strong>. Liability for simple negligence is excluded, except in cases of injury to life, limb, or health.</p>
+        <p>The Interpreter shall not be liable for any errors in interpretation or translation resulting from incorrect or incomplete information provided by the Client or from faulty or unclear source texts.</p>
+        <p>In any event, the total liability of the Interpreter for any and all claims arising out of a single assignment shall be limited to the value of the invoice for that specific assignment.</p>
+
+        <h2>9. Force Majeure</h2>
+        <p>Neither party shall be held liable for failure or delay in the performance of its obligations if such failure or delay is due to force majeure, including but not limited to acts of God, war, strikes, natural disasters, pandemics, or major technical failures beyond the party's control. The party affected shall notify the other party as soon as possible.</p>
+
+        <h2>10. Final Provisions</h2>
         <ul>
-          <li>Service Provider is liable for damages only in cases of gross negligence or intent; liability for slight negligence is excluded.</li>
-          <li>No liability is accepted for errors resulting from unclear, incomplete, or erroneous source materials or instructions provided by the Client.</li>
-          <li>Total liability is limited to the amount of the fee paid for the assignment.</li>
+            <li><strong>Governing Law:</strong> This agreement and all legal relations between the parties shall be governed by the laws of <strong>Germany</strong>, excluding the UN Convention on Contracts for the International Sale of Goods (CISG).</li>
+            <li><strong>Place of Jurisdiction:</strong> The exclusive place of jurisdiction for all disputes arising from this contractual relationship shall be <strong>Diez, Germany</strong>.</li>
+            <li><strong>Severability:</strong> Should any provision of these terms and conditions be or become invalid, the validity of the remaining provisions shall not be affected. The invalid provision shall be replaced by a valid one that comes closest to the original economic purpose.</li>
+            <li><strong>Written Form:</strong> Any amendments or additions to this agreement must be made in writing to be valid. This also applies to the waiver of this written form requirement.</li>
         </ul>
-
-        <h2>9. Cancellation & Termination</h2>
-        <ul>
-          <li>The Client may cancel assignments in writing at any time. In case of cancellation, the Service Provider is entitled to compensation for any work already performed and, for interpreting, cancellation fees as agreed or, in the absence of agreement, as customary in the industry.</li>
-        </ul>
-
-        <h2>10. Governing Law & Jurisdiction</h2>
-        <ul>
-          <li>These Terms and any disputes are governed by the laws of the Federal Republic of Germany.</li>
-          <li>Place of jurisdiction is Amtsgericht Diez, Germany, unless otherwise required by law.</li>
-        </ul>
-
-        <h2>11. Severability</h2>
-        <p>
-          Should any provision of these Terms be invalid or unenforceable, the remaining provisions remain unaffected.
-        </p>
-
-        <h2>12. Amendments</h2>
-        <p>
-          These Terms may be updated at any time. The current version is published on this website. Last updated: June 2025.
-        </p>
-
-        <h2>13. Contact</h2>
-        <p>
-          Questions about these Terms may be addressed to:<br>
-          Ivan Shevtsoff<br>
-          <a href="mailto:i.shevtsoff@gmail.com">i.shevtsoff@gmail.com</a><br>
-          Am Sonnenberg 12, 65558 Burgschwalbach, Germany
-        </p>
-      </div>
-    </section>
-  </main>
+    </div>
+<script>
+    // Simple script to set theme based on localStorage, if present
+    document.addEventListener('DOMContentLoaded', function() {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        }
+    });
+</script>
 </body>
 </html>
