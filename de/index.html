@@ -1,235 +1,586 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ivan Shevtsov – Lebenslauf</title>
-  <style>
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 2rem;
-      background: #ffffff;
-      color: #111;
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .header-left {
-      flex: 1 1 auto;
-      min-width: 340px;
-    }
-    .header-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-    .header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-    }
-    .social-icons a {
-      margin-left: 0.5rem;
-      display: inline-block;
-    }
-    .social-icons img {
-      width: 20px;
-      height: 20px;
-      filter: grayscale(100%);
-      transition: filter 0.2s ease;
-    }
-    .social-icons img:hover {
-      filter: grayscale(60%);
-    }
-    .download-link {
-      font-size: 0.9rem;
-    }
-    .download-link a {
-      text-decoration: none;
-      color: #111;
-    }
-    .download-link a:hover {
-      color: #555;
-    }
-    h2 {
-      font-weight: 600;
-      margin-top: 2rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.25rem;
-    }
-    .contact {
-      margin-bottom: 2rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 0.4rem;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    .label {
-      font-weight: bold;
-    }
-    @media (max-width: 600px) {
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .header-right {
-        align-items: flex-start;
-      }
-    }
-  </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<html lang="de" data-theme="dark"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konferenzdolmetscher für EN, DE, RU | Ivan Shevtsoff</title>
+    <meta name="author" content="Ivan Shevtsoff">
+    <meta name="description" content="Professionelles Konferenzdolmetschen für Englisch, Deutsch und Russisch. Präzises Simultan- und Remote-Dolmetschen (RSI) für anspruchsvolle Meetings in Recht, Medizin und Technik.">
+
+    <link rel="canonical" href="https://ivanshevtsoff.com">
+
+    <meta property="og:title" content="Ivan Shevtsoff | Konferenzdolmetscher (EN, DE, RU)">
+    <meta property="og:description" content="Präzises Simultan- und Remote-Dolmetschen für internationale Konferenzen und High-Level-Meetings.">
+    <meta property="og:url" content="https://ivanshevtsoff.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ivan Shevtsoff Konferenzdolmetschen">
+    <meta property="og:image" content="https://ivanshevtsoff.com/img/social-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ivan Shevtsoff | Konferenzdolmetscher (EN, DE, RU)">
+    <meta name="twitter:description" content="Präzises Simultan- und Remote-Dolmetschen für internationale Konferenzen und High-Level-Meetings.">
+    <meta name="twitter:image" content="https://ivanshevtsoff.com/img/social-preview.jpg">
+
+    <meta name="theme-color" content="#121212">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+    <meta name="google-site-verification" content="z198GASZHIZ1TUadFL4hCUdqg5PGjJBGj1CqCc-UXGw">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root { --bg-color: #f7f7f7; --surface-color: #ffffff; --primary-text-color: #1a1a1a; --secondary-text-color: #555555; --accent-color: #007aff; --border-color: #e5e5e5; --header-bg-transparent: rgba(247, 247, 247, 0.7); --header-bg-solid: #f7f7f7; --logo-filter: invert(0); }
+        [data-theme="dark"] { --bg-color: #121212; --surface-color: #1e1e1e; --primary-text-color: #ffffff; --secondary-text-color: #a0a0a0; --accent-color: #ffd700; --border-color: #333333; --header-bg-transparent: rgba(29, 29, 31, 0.7); --header-bg-solid: #1d1d1f; --logo-filter: invert(100%); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-color); color: var(--primary-text-color); line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease; }
+        h1, h2, h3 { font-weight: 700; line-height: 1.2; }
+        h1 { font-size: clamp(2.2rem, 8vw, 4.2rem); font-weight: 900; }
+        h2 { font-size: clamp(2rem, 6vw, 3rem); text-align: center; margin-bottom: 1rem; }
+        section { padding: 80px 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        .section-subheader { max-width: 650px; margin: 0 auto 40px auto; text-align: center; color: var(--secondary-text-color); font-size: 1.1rem; }
+        .main-header { position: fixed; top: 0; left: 0; width: 100%; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; z-index: 1000; background-color: var(--header-bg-transparent); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid rgba(128, 128, 128, 0.2); transition: background-color 0.3s ease; }
+        .main-header.scrolled { background-color: var(--header-bg-solid); }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary-text-color); text-decoration: none; }
+        .nav-links { display: none; list-style: none; gap: 30px; }
+        .nav-links a { color: var(--secondary-text-color); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--primary-text-color); }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .lang-switch a { color: var(--secondary-text-color); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 0 5px;}
+        .hamburger-menu { display: block; background: none; border: none; cursor: pointer; z-index: 1001; }
+        .hamburger-menu .bar { display: block; width: 25px; height: 2px; margin: 5px auto; background-color: var(--primary-text-color); transition: all 0.3s ease-in-out; }
+        .mobile-nav { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--bg-color); z-index: 999; transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1); padding: 100px 40px 40px; display: flex; flex-direction: column; overflow-y: auto; }
+        .mobile-nav.open { right: 0; }
+        .mobile-nav-links { list-style: none; display: flex; flex-direction: column; gap: 30px; }
+        .mobile-nav-links a { color: var(--primary-text-color); text-decoration: none; font-size: 1.5rem; font-weight: 600; }
+        #home { padding-top: 140px; min-height: 90vh; display: flex; align-items: center; }
+        .hero-container { display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center; }
+        .hero-content { position: relative; width: 100%; }
+        .hero-content .subheader { font-size: 1.25rem; color: var(--secondary-text-color); margin: 20px auto 30px; max-width: 550px; }
+        .cta-button { display: inline-block; background-color: var(--accent-color); color: var(--surface-color); padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .cta-button:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0, 122, 255, 0.3); }
+        [data-theme="dark"] .cta-button { color: #000; }
+        [data-theme="dark"] .cta-button:hover { box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2); }
+        .social-links { display: none; }
+        .hero-image { width: 100%; max-width: 380px; }
+        .hero-image img { width: 100%; border-radius: 20px; }
+        .main-headline { line-height: 1.3; }
+        .main-headline strong { font-weight: 700; display: block; }
+        .headline-languages { display: block; font-weight: 400; color: var(--secondary-text-color); font-size: 0.5em; margin-top: 0.5em; letter-spacing: 0.5px; }
+        #clients { background-color: var(--surface-color); padding: 60px 20px; }
+        .logos-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px 50px; }
+        .logos-container img { height: 30px; opacity: 0.6; filter: var(--logo-filter) grayscale(100%); transition: all 0.3s ease; }
+        .logos-container img:hover { opacity: 1; filter: var(--logo-filter) grayscale(0%); }
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 50px; }
+        .service-card { background-color: var(--surface-color); padding: 30px; border-radius: 15px; border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        [data-theme="dark"] .service-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .service-card .icon { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .service-card p { color: var(--secondary-text-color); }
+        #expertise { background-color: var(--surface-color); }
+        .expertise-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 50px; }
+        .expertise-card { background-color: var(--bg-color); padding: 25px; border-radius: 10px; border: 1px solid var(--border-color); font-size: 1.1rem; font-weight: 500; display: flex; align-items: center; gap: 15px; }
+        .expertise-card .icon { font-size: 1.5rem; color: var(--accent-color); min-width: 24px; }
+        .about-container { display: flex; flex-direction: column; align-items: center; gap: 40px; }
+        .about-image { flex-shrink: 0; width: 100%; max-width: 350px; }
+        .about-image img { width: 100%; border-radius: 15px; }
+        .about-text h2 { text-align: left; margin-bottom: 20px; }
+        .about-text p { color: var(--secondary-text-color); margin-bottom: 15px; font-size: 1.1rem; }
+        #action { background-color: var(--surface-color); }
+        .video-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 50px; }
+        .video-thumbnail { position: relative; cursor: pointer; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); }
+        .video-thumbnail::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); transition: background 0.3s ease; }
+        .video-thumbnail:hover::before { background: rgba(0,0,0,0.1); }
+        .video-thumbnail img { width: 100%; display: block; }
+        .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: rgba(255,255,255,0.8); transition: transform 0.3s ease, color 0.3s ease; }
+        .video-thumbnail:hover .play-button { transform: translate(-50%, -50%) scale(1.1); color: #fff; }
+        .video-title { position: absolute; bottom: 15px; left: 20px; right: 20px; color: #fff; font-weight: 600; font-size: 1.1rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.7); }
+        .lightbox { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
+        .lightbox.show { display: flex; opacity: 1; }
+        .lightbox-content { position: relative; width: 90%; max-width: 960px; }
+        .lightbox-video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; background: #000; border-radius: 8px; overflow: hidden; }
+        .lightbox-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .lightbox-close { position: absolute; top: -45px; right: 0px; font-size: 2.5rem; color: #fff; cursor: pointer; line-height: 1; }
+        .numbers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 20px; }
+        .number-item { text-align: center; }
+        .number-item .number { font-size: clamp(2.5rem, 8vw, 3.5rem); font-weight: 900; color: var(--accent-color); }
+        .number-item .text { color: var(--secondary-text-color); font-size: 0.9rem; }
+        #contact { background-color: var(--surface-color); }
+        .contact-wrapper { display: flex; flex-direction: column; gap: 50px; margin-top: 50px; }
+        .contact-info a { display: inline-block; color: var(--primary-text-color); text-decoration: none; font-size: 1.2rem; margin-bottom: 20px; transition: color 0.3s ease; }
+        .contact-info a:hover { color: var(--accent-color); }
+        .contact-info i { margin-right: 15px; color: var(--accent-color); width: 25px; }
+        .contact-form .form-group { margin-bottom: 20px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--primary-text-color); font-size: 1rem; font-family: 'Inter', sans-serif; transition: border-color 0.3s ease; }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent-color); }
+        .contact-form textarea { min-height: 150px; resize: vertical; }
+        .submit-btn { background-color: var(--accent-color); color: var(--surface-color); padding: 15px 35px; border-radius: 30px; border: none; cursor: pointer; font-weight: 600; font-size: 1rem; transition: transform 0.3s ease; }
+        [data-theme="dark"] .submit-btn { color: #000; }
+        .submit-btn:hover { transform: scale(1.05); }
+        .main-footer { text-align: center; padding: 60px 20px; border-top: 1px solid var(--border-color); }
+        .footer-content { display: flex; flex-direction: column; align-items: center; gap: 30px; }
+        .footer-social-links a { color: var(--secondary-text-color); margin: 0 12px; font-size: 1.5rem; transition: color 0.3s ease; }
+        .footer-social-links a:hover { color: var(--accent-color); }
+        .footer-legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; }
+        .footer-legal-links a { color: var(--secondary-text-color); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
+        .footer-legal-links a:hover { color: var(--primary-text-color); }
+        .footer-copyright { color: var(--secondary-text-color); font-size: 0.9rem; }
+        .theme-switcher { display: flex; align-items: center; gap: 10px; background-color: var(--surface-color); padding: 5px; border-radius: 20px; border: 1px solid var(--border-color); }
+        .theme-switcher button { background: none; border: none; color: var(--secondary-text-color); cursor: pointer; font-size: 1rem; padding: 5px 10px; border-radius: 15px; transition: background-color 0.3s, color 0.3s; }
+        .theme-switcher button.active { background-color: var(--accent-color); color: var(--surface-color); }
+        [data-theme="dark"] .theme-switcher button.active { color: #000; }
+        .cookie-banner { position: fixed; bottom: -100%; left: 0; width: 100%; background-color: var(--surface-color); padding: 20px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 1100; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; border-top: 1px solid var(--border-color); transition: bottom 0.5s ease-in-out; }
+        .cookie-banner.show { bottom: 0; }
+        .cookie-banner p { color: var(--secondary-text-color); font-size: 0.9rem; margin: 0; max-width: 600px; }
+        .cookie-banner a { color: var(--accent-color); text-decoration: underline; }
+        .cookie-accept-btn { background-color: var(--accent-color); color: var(--surface-color); padding: 10px 25px; border-radius: 20px; border: none; cursor: pointer; font-weight: 500; }
+        [data-theme="dark"] .cookie-accept-btn { color: #000; }
+        @media (min-width: 768px) {
+            .hamburger-menu, .mobile-nav { display: none; }
+            .nav-links { display: flex; }
+            .hero-container { flex-direction: row; text-align: left; gap: 60px; }
+            .hero-content { width: 55%; }
+            .hero-content .subheader { margin-left: 0; margin-right: 0; }
+            .hero-image { width: 45%; max-width: 450px; order: 2; }
+            .hero-content { order: 1; }
+            .social-links { display: flex; flex-direction: column; gap: 20px; position: absolute; left: -60px; top: 50%; transform: translateY(-50%); }
+            .social-links a { color: var(--secondary-text-color); font-size: 1.5rem; transition: color 0.3s ease; }
+            .social-links a:hover { color: var(--accent-color); }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-container { flex-direction: row; align-items: flex-start; gap: 60px; }
+            .about-image { width: 40%; max-width: 400px; }
+            .about-text { width: 60%; }
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
+            .numbers-grid { grid-template-columns: repeat(4, 1fr); }
+            .contact-wrapper { flex-direction: row; gap: 60px; }
+            .contact-info, .contact-form { flex: 1; }
+            .cookie-banner { flex-direction: row; justify-content: center; gap: 20px; }
+        }
+        @media (min-width: 1024px) {
+            .expertise-grid { grid-template-columns: repeat(3, 1fr); }
+            .expertise-card.span-2 { grid-column: span 2; }
+            .video-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
 </head>
 <body>
-  <div class="header">
-    <div class="header-left">
-      <h1>Ivan Shevtsov</h1>
+
+    <header class="main-header" id="main-header">
+        <a href="#home" class="logo">IS.</a>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#expertise">Fachgebiete</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#action">Demos</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        
+        <div class="nav-right">
+            <div class="lang-switch">
+                <a href="../">EN</a>
+                <a href="../ru">RU</a>
+            </div>
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Menü öffnen" aria-controls="mobile-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Leistungen</a></li>
+            <li><a href="#expertise">Fachgebiete</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#action">Demos</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
     </div>
-    <div class="header-right">
-      <div class="download-link">
-        <a href="/" style="margin-right: 10px; text-decoration: none; color: #111;">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/ru/" style="text-decoration: none; color: #111;">Русский</a>
-      </div>
+
+
+    <main>
+        <section id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ivanshevtsoff/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/ivaninterpreter/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.proz.com/profile/3093572" aria-label="ProZ"><i class="fa fa-p"></i></a>
+                    </div>
+                    <h1 class="main-headline">
+ 			 <strong>Klartext für Ihr Business.</strong>
+  			 <span class="headline-languages">Englisch • Deutsch • Russisch</span>
+		    </h1>
+                    <p class="subheader">Ich sorge dafür, dass man Sie versteht. Präzise, professionell und zuverlässig bei internationalen Konferenzen und wichtigen Verhandlungen.</p>
+                    <a href="#contact" class="cta-button">Projekt anfragen</a>
+                </div>
+                <div class="hero-image">
+                    <img src="../img/hero1.jpeg" alt="Porträt von Ivan Shevtsoff, Konferenzdolmetscher">
+                </div>
+            </div>
+        </section>
+
+        <section id="clients">
+            <div class="container logos-container">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Pfizer_logo.svg" alt="Pfizer" />
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Siemens-logo.svg" alt="Siemens">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Philips_logo.svg" alt="Philips">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Netflix_Logomark.png" alt="Netflix">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Xbox_Live_logo.svg" alt="Microsoft">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/General_Electric_logo.svg" alt="GE">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Unodc-schriftzug.svg" alt="UNODC">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/UNDRR_logo.png" alt="UNDRR">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/IFRC_logo_2020.svg" alt="IFRC">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/UNESCO_logo_English.svg" alt="UNESCO">
+      	      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/IIHF_text_logo.svg" alt="IIHF">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Logo_Merck_KGaA_2015.svg" alt="Merck">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Astrazeneca_text_logo.svg" alt="AstraZeneca">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Boehringer_Ingelheim_Logo.svg" alt="Boehringer Ingelheim">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Merz_Pharma_logo.svg" alt="Merz">
+     	      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Biogen_logo.svg" alt="Biogen">
+    	      <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Bucherer_wiki_logo.png" alt="Bucherer">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Flextronics_logo.svg" alt="Flextronics">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Goodyear_logo.png" alt="Goodyear">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg" alt="Volkswagen">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Kempinski_Hotels_%26_Resorts_Logo.svg" alt="Kempinski">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Kimberly-Clark_logo.svg" alt="Kimberly-Clark">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/KNAUF_Logo_2024.svg" alt="Knauf">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/F._Hoffmann-La_Roche_2021_logo.svg" alt="La Roche">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Paul_Hastings_logo.svg" alt="Paul Hastings">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Ropes_%26_Gray_LLP_logo.svg" alt="Ropes & Gray">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Logo_Taylor_Wessing_green.png" alt="Taylor Wessing">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Saudi_Aramco_logo_without_star.png" alt="Saudi Aramco">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Zoetis_logo.svg" alt="Zoetis">
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Meine Leistungen</h2>
+                <p class="section-subheader">Für jedes Event das richtige Setup. Ob remote, hybrid oder vor Ort – ich sorge für reibungslose Kommunikation.</p>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="icon"><i class="fas fa-headset"></i></div>
+                        <h3>Konferenzdolmetschen</h3>
+                        <p>Simultan- und Konsekutivdolmetschen für Konferenzen, Gipfeltreffen und Seminare jeder Größenordnung.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="icon"><i class="fas fa-desktop"></i></div>
+                        <h3>Remote-Dolmetschen (RSI)</h3>
+                        <p>Nahtloses Remote-Dolmetschen für virtuelle Events auf Plattformen wie Zoom, Teams, Kudo oder Interprefy.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="icon"><i class="fas fa-handshake-angle"></i></div>
+                        <h3>Verhandlungsdolmetschen</h3>
+                        <p>Effektive Kommunikation bei Geschäftsverhandlungen, diplomatischen Missionen und Meetings im kleinen Kreis.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>Fachübersetzungen</h3>
+                        <p>Präzise Humanübersetzung von Rechts-, Finanz- und Medizindokumenten, bei denen jeder Begriff zählt.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise">
+            <div class="container">
+                <h2>Meine Fachgebiete</h2>
+                <p class="section-subheader">Ich übersetze nicht nur Worte, sondern den Sinn dahinter. Tiefes Fachwissen garantiert, dass auch komplexe Inhalte korrekt ankommen.</p>
+                <div class="expertise-grid">
+                    <div class="expertise-card span-2">
+                        <span class="icon"><i class="fas fa-gavel"></i></span>
+                        <span>Recht, Gericht & Schiedsverfahren</span>
+                    </div>
+                    <div class="expertise-card">
+                        <span class="icon"><i class="fas fa-microchip"></i></span>
+                        <span>Technologie & IT</span>
+                    </div>
+                    <div class="expertise-card">
+                        <span class="icon"><i class="fas fa-landmark"></i></span>
+                        <span>Finanzen & Bankwesen</span>
+                    </div>
+                    <div class="expertise-card span-2">
+                        <span class="icon"><i class="fas fa-globe-europe"></i></span>
+                        <span>EU & Internationale Politik</span>
+                    </div>
+                    <div class="expertise-card">
+                        <span class="icon"><i class="fas fa-pills"></i></span>
+                        <span>Medizin & Pharma</span>
+                    </div>
+                    <div class="expertise-card">
+                        <span class="icon"><i class="fas fa-futbol"></i></span>
+                        <span>Sport</span>
+                    </div>
+                    <div class="expertise-card">
+                        <span class="icon"><i class="fas fa-cogs"></i></span>
+                        <span>Technik & Maschinenbau</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img src="../img/about1.jpg" alt="Ivan Shevtsoff, professioneller Konferenzdolmetscher">
+                </div>
+                <div class="about-text">
+                    <h2>Das ist mein Background.</h2>
+                    <p>Russisch ist meine Muttersprache, Deutsch und Englisch spreche ich seit meiner Kindheit. Mein Fundament: ein Studium der Germanistik (2005) mit Austausch in Deutschland.</p>
+                    <p>Seit 2008 dolmetsche ich auf High-Level-Events in Russland, der Schweiz und Österreich. Davor habe ich eine Übersetzungsagentur geleitet und Großprojekte für Kunden wie Siemens, Hochtief, VW und Gazprom gestemmt. Ich kenne das Business von beiden Seiten.</p>
+                    <p>Jahrelange Erfahrung in 9 Ländern von Argentinien bis Malaysia schärfen den Blick für kulturelle Nuancen. Aktuell vertiefe ich mein Wissen im Masterstudium an der Universität Heidelberg (seit 2023). Ich entwickle mich ständig weiter, um für meine Kunden die beste Leistung zu bringen.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="action">
+            <div class="container">
+                <h2>Ich in Aktion</h2>
+                <p class="section-subheader">Videodemos sind in Arbeit. In der Zwischenzeit: Kontaktieren Sie mich für Referenzen oder eine Live-Demo.</p>
+                <div class="video-grid" style="display: none;">
+                    </div>
+            </div>
+        </section>
+        
+        <section id="numbers">
+            <div class="container">
+                <div class="numbers-grid">
+                    <div class="number-item">
+                        <div class="number">4800+</div>
+                        <div class="text">Stunden Konferenzdolmetschen</div>
+                    </div>
+                    <div class="number-item">
+                        <div class="number">5.2+</div>
+                        <div class="text">Mio. Wörter übersetzt</div>
+                    </div>
+                    <div class="number-item">
+                        <div class="number">300+</div>
+                        <div class="text">Konferenzen gedolmetscht</div>
+                    </div>
+                    <div class="number-item">
+                        <div class="number">5</div>
+                        <div class="text">Kontinente</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Schreiben Sie mir.</h2>
+                <p class="section-subheader">Bereit für Ihr nächstes Projekt? Kontaktieren Sie mich für meine Verfügbarkeit und ein konkretes Angebot.</p>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div id="email-container">
+                            <a href="#"><i class="fas fa-envelope"></i> E-Mail wird geladen...</a>
+                        </div>
+                        <a href="tel:+4915756364745"><i class="fas fa-phone"></i> +49 157 56 364 745</a><br><br>
+			            <a href="https://calendly.com/ishevtsoff/30min" target="_blank"><i class="far fa-calendar"></i> 30-Minuten-Call buchen</a>
+                    </div>
+                    <div class="contact-form">
+                        <form id="my-form" action="https://formspree.io/f/mkgjvkon" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Ihr Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Ihre E-Mail" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Beschreiben Sie kurz Ihr Projekt..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Anfrage senden</button>
+                            <div id="my-form-status" style="margin-top: 15px;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="theme-switcher">
+                <button id="light-mode-btn" aria-label="Heller Modus"><i class="fas fa-sun"></i></button>
+                <button id="dark-mode-btn" aria-label="Dunkler Modus"><i class="fas fa-moon"></i></button>
+            </div>
+            <div class="footer-social-links">
+   			    <a href="https://www.linkedin.com/in/ivanshevtsoff/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/ivaninterpreter/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.proz.com/profile/3093572" aria-label="ProZ"><i class="fa fa-p"></i></a>
+            </div>
+            <div class="footer-legal-links">
+                <a href="../impressum">Impressum</a>
+                <a href="../privacy">Datenschutz</a>
+                <a href="../tac">AGB</a>
+            </div>
+            <div class="footer-copyright">
+                © <span id="year"></span> Ivan Shevtsoff. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+    
+    <div class="lightbox" id="youtube-lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightbox-close" aria-label="Video schließen">×</span>
+            <div class="lightbox-video-wrapper" id="lightbox-video-wrapper">
+                </div>
+        </div>
     </div>
-  </div>
 
-  <p class="contact">
-  Konferenzdolmetscher und Fachübersetzer – Russisch | Deutsch | Englisch<br>
-  Raum Frankfurt am Main, Deutschland<br>
-  +49 1575 6364745 | <span>i.shevtsoff@gmail.com</span>
- </p>
-
-  <div class="section">
-    <h2>Profil</h2>
-    <p>Erfahrener Konferenzdolmetscher und Fachübersetzer mit über 20 Jahren Berufspraxis in Europa, Russland und Asien. Schwerpunkt auf simultanem Dolmetschen bei internationalen Konferenzen, Fachveranstaltungen sowie Geschäfts- und Behördenkontakten. Langfristiger Sprachpartner von Siemens, Philips, GE, den Vereinten Nationen, EU-Institutionen, internationalen Sportverbänden sowie namhaften Pharmaunternehmen. Verhandlungssicher in Russisch, Deutsch und Englisch. Wohnhaft in der Rhein-Main-Region. Verfügbar für Einsätze vor Ort sowie online.</p>
-  </div>
-
-  <div class="section">
-    <h2>Schwerpunkte</h2>
-    <ul>
-      <li>Simultandolmetschen und Konsekutivdolmetschen</li>
-      <li>Beglaubigte Fachübersetzungen (DE–RU–EN)</li>
-      <li>Übersetzungen in den Bereichen Recht, Technik, Medizin</li>
-      <li>Erfahrung mit RSI-Plattformen (Zoom, Teams, Interprefy, KUDO, Webex)</li>
-      <li>Mehrsprachige Veranstaltungsbetreuung und Moderation</li>
-      <li>Transkreation und Lokalisierung von Inhalten</li>
-      <li>Terminologiemanagement und Erstellung von Glossaren</li>
-      <li>Untertitelung und Voiceover-Skriptübersetzungen</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Ausgewählte Einsätze und Projekte</h2>
-    <ul>
-      <li>UNODC Civil Society Forum (UNCAC COSP), Wien</li>
-      <li>IIHF-Halbjahreskongress, Athen</li>
-      <li>Regionalkonferenz der IFRC, Kuala Lumpur</li>
-      <li>GPP-Advisory-Board-Meeting (Boehringer Ingelheim), Singapur</li>
-      <li>XBOX Games Show, Los Angeles</li>
-      <li>Petersburger Dialog, Moskau</li>
-      <li>Philips Business Carousel Conference, Bangkok</li>
-      <li>Wasser Berlin International, Berlin</li>
-      <li>AFC Coach Education Conference, Kuala Lumpur</li>
-      <li>FCPA-Verhandlungstermine (Pfizer), Astana</li>
-      <li>Eröffnung des Berlin Electrification Center, Berlin</li>
-      <li>Hauptversammlung von Kimberly-Clark, Mexiko-Stadt</li>
-      <li>Internationales Wirtschaftsforum Sankt Petersburg</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Berufserfahrung</h2>
-    <p><span class="label">Freiberuflicher Konferenzdolmetscher und Übersetzer</span><br>Europa und Asien | seit 2003</p>
-    <ul>
-      <li>Über 500 Dolmetschtage bei internationalen Konferenzen, Verhandlungen und Foren</li>
-      <li>Remote-Dolmetschen für Webinare, technische Präsentationen und Schulungen</li>
-      <li>Übersetzung juristischer, medizinischer und technischer Fachtexte</li>
-    </ul>
-    <p><span class="label">Technischer Übersetzer – Passavant & Watec GmbH</span><br>Aarbergen | 2012–2013</p>
-    <ul>
-      <li>Lokalisierung von Softwarelösungen für die Ölbranche</li>
-      <li>Terminologiearbeit und enge Zusammenarbeit mit Entwicklungsteams</li>
-    </ul>
-    <p><span class="label">Fachübersetzer, Dolmetscher und Dolmetscher-Koordinator – Siemens</span><br>Sankt Petersburg, Moskau, München | 2007–2016</p>
-    <ul>
-      <li>Technische Übersetzungen (EN–DE–RU) in den Bereichen Eisenbahnsysteme und Energie</li>
-      <li>Dokumentationsservice in Russisch und Deutsch</li>
-      <li>Dolmetscheinsätze bei Werksaudits und Schulungen</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Ausbildung</h2>
-    <ul>
-      <li>Universität Heidelberg – M.A. Konferenzdolmetschen (laufend) | seit 2024</li>
-      <li>Staatliche Universität Rostow (Russland) – Magister Germanistik und Übersetzen | 2000–2005</li>
-      <li>Universität Potsdam – Auslandspraktikum in Soziologie | 2002–2003</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Sprachkenntnisse</h2>
-    <ul>
-      <li>Russisch – Muttersprache</li>
-      <li>Deutsch – verhandlungssicher (C2)</li>
-      <li>Englisch – fließend (C1/C2)</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Technische Kompetenzen</h2>
-    <ul>
-      <li>CAT-Tools: SDL Trados, MemoQ, Smartcat, Memsource, OmegaT</li>
-      <li>RSI-Plattformen: Interprefy, Zoom, Teams, KUDO, Webex</li>
-      <li>Audio: Adobe Audition, iZotope</li>
-      <li>Bürosoftware: MS Office, Google Workspace</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Verfügbarkeit</h2>
-    <ul>
-      <li>Wohnort: Deutschland, Raum Frankfurt am Main</li>
-      <li>Mobil, flexibel, kurzfristig einsetzbar</li>
-      <li>Bereit für Präsenz- und Remote-Projekte</li>
-    </ul>
-  </div>
-
-  <footer style="margin-top: 3rem; text-align: center;">
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/ivanshevtsoff/" title="LinkedIn" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
-      <a href="https://www.facebook.com/i.shevtsoff" title="Facebook" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"></a>
-      <a href="https://www.instagram.com/ivaninterpreter/" title="Instagram" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"></a>
-      <a href="https://wa.me/4368110431822" title="WhatsApp" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp"></a>
-      <a href="https://t.me/+4915756364745" title="Telegram" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" alt="Telegram"></a>
+    <div class="cookie-banner" id="cookie-banner">
+        <p>Diese Website verwendet Cookies für eine optimale Nutzererfahrung. Mit der weiteren Nutzung stimmen Sie der <a href="/privacy">Cookie-Richtlinie</a> zu.</p>
+        <button class="cookie-accept-btn" id="cookie-accept-btn">Akzeptieren</button>
     </div>
-    <div class="download-link" style="margin-top: 1rem; font-size: 0.9rem;">
-      <a href="./Ivan_Shevtsov_Interpreter_CV.pdf" download>PDF herunterladen</a>
-    </div>
-    <div style="font-size: 0.7rem; color: #777; margin-top: 1rem;">
-      © Ivan Shevtsov. Alle Rechte vorbehalten.
-    </div>
-  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // JS bleibt unverändert, da es nur die Funktionalität steuert.
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    const hamburger = document.getElementById('hamburger-menu');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavLinks = mobileNav.querySelectorAll('a');
+    const toggleMenu = () => {
+        const isOpen = mobileNav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+    hamburger.addEventListener('click', toggleMenu);
+    mobileNavLinks.forEach(link => link.addEventListener('click', () => {
+        if (mobileNav.classList.contains('open')) {
+            toggleMenu();
+        }
+    }));
+    const lightModeBtn = document.getElementById('light-mode-btn');
+    const darkModeBtn = document.getElementById('dark-mode-btn');
+    const userTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const updateThemeButtons = (theme) => {
+        if (theme === 'dark') {
+            darkModeBtn.classList.add('active');
+            lightModeBtn.classList.remove('active');
+        } else {
+            lightModeBtn.classList.add('active');
+            darkModeBtn.classList.remove('active');
+        }
+    };
+    const setTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        updateThemeButtons(theme);
+    };
+    lightModeBtn.addEventListener('click', () => setTheme('light'));
+    darkModeBtn.addEventListener('click', () => setTheme('dark'));
+    if (userTheme) {
+        setTheme(userTheme);
+    } else {
+        setTheme(systemTheme ? 'dark' : 'light');
+    }
+    const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+    const lightbox = document.getElementById('youtube-lightbox');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxVideoWrapper = document.getElementById('lightbox-video-wrapper');
+    const openLightbox = (videoId) => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0`;
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        lightboxVideoWrapper.innerHTML = '';
+        lightboxVideoWrapper.appendChild(iframe);
+        lightbox.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    };
+    const closeLightbox = () => {
+        lightbox.classList.remove('show');
+        lightboxVideoWrapper.innerHTML = '';
+        document.body.style.overflow = '';
+    };
+    videoThumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            const videoId = thumbnail.dataset.youtubeId;
+            if (videoId) openLightbox(videoId);
+        });
+    });
+    if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if(lightbox) lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && lightbox.classList.contains('show')) {
+            closeLightbox();
+        }
+    });
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAcceptBtn = document.getElementById('cookie-accept-btn');
+    if (!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => cookieBanner.classList.add('show'), 1500);
+    }
+    cookieAcceptBtn.addEventListener('click', () => {
+        cookieBanner.classList.remove('show');
+        localStorage.setItem('cookieConsent', 'true');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const e1 = "i.shevtsoff";
+    const e2 = "gmail.com";
+    const e3 = [e1, e2].join("@");
+    const e4 = `mailto:${e3}`;
+    const emailTargets = ["email-container"];
+    emailTargets.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.innerHTML = `<a href="${e4}"><i class="fas fa-envelope"></i> ${e3}</a>`;
+      }
+    });
+    const form = document.getElementById("my-form");
+    if (form) {
+      form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            status.innerHTML = "Danke! Ihre Anfrage wurde gesendet.";
+            form.reset()
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+              } else {
+                status.innerHTML = "Oops! Da ist was schiefgelaufen."
+              }
+            })
+          }
+        }).catch(error => {
+          status.innerHTML = "Oops! Da ist was schiefgelaufen."
+        });
+      });
+    }
+
+}); 
+</script>
 
 </body>
 </html>
