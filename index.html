@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expert Conference Interpreter | English, German, Russian | Ivan Shevtsoff</title>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ivan Shevtsoff",
+  "jobTitle": "Conference Interpreter EN-DE-RU",
+  "url": "https://ivanshevtsoff.com",
+  "image": "https://ivanshevtsoff.com/photo.jpg",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Independent"
+  },
+  "areaServed": ["Europe", "Asia", "Middle East"],
+  "sameAs": [
+    "https://www.linkedin.com/in/ivanshevtsoff",
+    "https://twitter.com/ivanshevtsoff"
+  ],
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "Simultaneous & Remote Conference Interpreting",
+      "serviceType": "On-site & RSI",
+      "areaServed": ["Global"],
+      "availableLanguage": ["English", "German", "Russian"]
+    }
+  }
+}
+</script>
     <meta name="author" content="Ivan Shevtsoff">
     <meta name="description" content="Expert conference interpreter for English, German, and Russian. Providing precise simultaneous and remote (RSI) interpreting for high-level meetings in legal, medical, and technical fields.">
 
@@ -917,7 +946,7 @@
                     <a href="#contact" class="cta-button">Request a Quote</a>
                 </div>
                 <div class="hero-image">
-                    <img src="img/hero1.jpeg" alt="Portrait of Ivan Shevtsoff, Conference Interpreter">
+                    <img src="img/hero1.jpeg" width="1280" height="720" style="width:100%;height:auto;" alt="Portrait of Ivan Shevtsoff, Conference Interpreter">
                 </div>
             </div>
         </section>
@@ -1162,10 +1191,11 @@
     </div>
 
     <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" id="cookie-banner">
-        <p>This website uses cookies to ensure you get the best experience. By continuing to browse, you agree to our <a href="#">Cookie Policy</a>.</p>
-        <button class="cookie-accept-btn" id="cookie-accept-btn">Accept</button>
-    </div>
+<div id="cookie-banner">
+  <p>We use cookies to improve your experience. <a href="/privacy">Details</a></p>
+  <button id="accept">Accept all</button>
+  <button id="reject">Reject non-essential</button>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -1274,17 +1304,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // --- Cookie Banner ---
-    const cookieBanner = document.getElementById('cookie-banner');
-    const cookieAcceptBtn = document.getElementById('cookie-accept-btn');
-
-    if (!localStorage.getItem('cookieConsent')) {
-        setTimeout(() => cookieBanner.classList.add('show'), 1500);
-    }
-    
-    cookieAcceptBtn.addEventListener('click', () => {
-        cookieBanner.classList.remove('show');
-        localStorage.setItem('cookieConsent', 'true');
-    });
+const banner = document.getElementById('cookie-banner');
+document.getElementById('accept').onclick = () => {
+  document.cookie = "consent=all;path=/;max-age=31536000";
+  banner.remove();
+};
+document.getElementById('reject').onclick = () => {
+  document.cookie = "consent=necessary;path=/;max-age=31536000";
+  banner.remove();
+};
 
     // --- Footer Year ---
     document.getElementById('year').textContent = new Date().getFullYear();
