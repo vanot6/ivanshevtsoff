@@ -741,48 +741,68 @@
             color: #000;
         }
         
-/* ==== COOKIE BANNER ==== */
+/* ===== COOKIE BANNER (refined) ===== */
 #cookie-banner{
-  position:fixed;bottom:-100%;left:0;right:0;
-  width:100%;
-  background:var(--surface-color, #0d2c54);
-  color:var(--on-surface-color, #ffffff);
-  padding:20px 16px;
-  font-size:.85rem;
-  display:flex;flex-wrap:wrap;
-  gap:12px;justify-content:center;align-items:center;
-  text-align:center;
-  border-top:1px solid var(--border-color, #e0e4e8);
-  box-shadow:0 -2px 10px rgba(0,0,0,.1);
+  position:fixed;inset:auto 0 0 0;      /* bottom:0; left/right:0 */
+  background:#0d2c54;
+  color:#fff;
+  font-size:.875rem;
+  line-height:1.45;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  padding:14px 18px 18px;
+  box-shadow:0 -3px 14px rgba(0,0,0,.12);
+  transform:translateY(100%);
+  transition:transform .35s ease;
   z-index:1100;
-  transition:bottom .45s ease-in-out;
+}
+#cookie-banner.show{transform:none;}
+
+#cookie-banner p{
+  margin:0;
+  max-width:720px;
+  text-align:center;
+}
+#cookie-banner a{
+  color:#ff9a3c;
+  text-decoration:underline;
 }
 
-/* показ баннера */
-#cookie-banner.show{bottom:0;}
+#cookie-banner .btn{
+  border:2px solid transparent;
+  padding:9px 24px;
+  border-radius:22px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.25s;
+}
+#cookie-banner .btn--accept{
+  background:#ff9a3c;
+  color:#fff;
+}
+#cookie-banner .btn--accept:hover{
+  background:#ffa956;
+}
+#cookie-banner .btn--reject{
+  background:transparent;
+  color:#ff9a3c;
+  border-color:#ff9a3c;
+}
+#cookie-banner .btn--reject:hover{
+  background:#fff;
+  color:#0d2c54;
+}
 
-/* текст и ссылки */
-#cookie-banner p{margin:0;max-width:600px;color:var(--secondary-text-color,#d7e0f3);}
-#cookie-banner a{color:var(--accent-color,#ff6b00);text-decoration:underline;}
-
-/* кнопки */
-#cookie-banner button{
-  border:0;border-radius:20px;cursor:pointer;font-weight:600;
-  padding:10px 25px;transition:.25s;
+/* desktop: кнопки в одну линию */
+@media(min-width:600px){
+  #cookie-banner{
+    flex-direction:row;
+    justify-content:center;
+    padding:12px 24px;
+  }
 }
-#accept{
-  background:var(--accent-color,#ff6b00);color:var(--surface-color,#ffffff);
-}
-#reject{
-  background:var(--light-color,#ffffff);color:var(--primary-color,#0d2c54);
-}
-
-/* тёмная тема (если переключатель already использует [data-theme="dark"]) */
-[data-theme="dark"] #cookie-banner{
-  background:#1a1a1a;color:#f0f0f0;border-top-color:#333;
-}
-[data-theme="dark"] #cookie-banner a{color:#ff8b2a;}
-[data-theme="dark"] #accept{color:#000;}      /* оранжевый фон остаётся */
 
         /* ------------------- */
         /* Media Queries - Tablet & Desktop */
@@ -1192,8 +1212,10 @@
     <!-- Cookie Consent Banner -->
 <div id="cookie-banner">
   <p>We use cookies to improve your experience. <a href="/privacy">Details</a></p>
+     <div style="display:flex;gap:12px;">
   <button id="accept">Accept all</button>
   <button id="reject">Reject non-essential</button>
+     </div>
 </div>
 
 <script>
