@@ -741,69 +741,59 @@
             color: #000;
         }
         
-/* ===== COOKIE BANNER (refined) ===== */
+/* ==== COOKIE BANNER — ПРОСТО, НАДЁЖНО ==== */
 #cookie-banner{
   position:fixed;
-
-  background:#0d2c54;
+  left:0; right:0; bottom:0;
+  width:100%;
+  background:#0d2c54;          /* тёмно-синий фон */
   color:#fff;
-  font-size:.875rem;
+  font-size:.85rem;
   line-height:1.45;
+  padding:14px 18px 16px;
   display:flex;
-  flex-direction:column;
-  align-items:center;
+  flex-wrap:wrap;
   gap:14px;
-  padding:14px 18px 18px;
-  box-shadow:0 -3px 14px rgba(0,0,0,.12);
-		left:0; right:0; bottom:0;    /* явный bottom:0 */
-  transform:translateY(110%);   /* чуть дальше, чтобы точно скрыт */
-  transition:transform .35s ease-out;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  box-shadow:0 -3px 14px rgba(0,0,0,.15);
   z-index:1100;
 }
-#cookie-banner.show{transform:translateY(0);}
 
 #cookie-banner p{
   margin:0;
   max-width:720px;
-  text-align:center;
 }
+
 #cookie-banner a{
   color:#ff9a3c;
   text-decoration:underline;
 }
 
-#cookie-banner .btn{
-  border:2px solid transparent;
+/* кнопки */
+#cookie-banner button{
+  border:0;
   padding:9px 24px;
   border-radius:22px;
   font-weight:600;
   cursor:pointer;
   transition:.25s;
 }
-#cookie-banner .btn--accept{
+#cookie-accept{
   background:#ff9a3c;
   color:#fff;
 }
-#cookie-banner .btn--accept:hover{
-  background:#ffa956;
-}
-#cookie-banner .btn--reject{
+#cookie-reject{
   background:transparent;
   color:#ff9a3c;
-  border-color:#ff9a3c;
+  border:2px solid #ff9a3c;
 }
-#cookie-banner .btn--reject:hover{
-  background:#fff;
-  color:#0d2c54;
-}
+#cookie-accept:hover{background:#ffa95b;}
+#cookie-reject:hover{background:#fff;color:#0d2c54;}
 
-/* desktop: кнопки в одну линию */
 @media(min-width:600px){
-  #cookie-banner{
-    flex-direction:row;
-    justify-content:center;
-    padding:12px 24px;
-  }
+  #cookie-banner{flex-wrap:nowrap;}
 }
 
         /* ------------------- */
@@ -1213,11 +1203,10 @@
 
     <!-- Cookie Consent Banner -->
 <div id="cookie-banner">
-  <p>We use cookies to improve your experience. <a href="/privacy">Details</a></p>
-     <div style="display:flex;gap:12px;">
-  <button id="accept">Accept all</button>
-  <button id="reject">Reject non-essential</button>
-     </div>
+  <p>Мы используем cookies для улучшения работы сайта. <a href="/privacy">Подробнее</a></p>
+  <button id="cookie-accept">Принять все</button>
+  <button id="cookie-reject">Только необходимые</button>
+</div>
 </div>
 
 <script>
@@ -1327,15 +1316,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // --- Cookie Banner ---
-const banner = document.getElementById('cookie-banner');
-document.getElementById('accept').onclick = () => {
-  document.cookie = "consent=all;path=/;max-age=31536000";
-  banner.remove();
-};
-document.getElementById('reject').onclick = () => {
-  document.cookie = "consent=necessary;path=/;max-age=31536000";
-  banner.remove();
-};
+(function(){
+  const banner = document.getElementById('cookie-banner');
+  // если пользователь уже выбирал – не показываем
+  if (document.cookie.includes('consent=')) { banner.remove(); return; }
+
+  document.getElementById('cookie-accept').onclick = ()=>{
+    document.cookie = "consent=all;path=/;max-age=31536000";
+    banner.remove();
+  };
+  document.getElementById('cookie-reject').onclick = ()=>{
+    document.cookie = "consent=necessary;path=/;max-age=31536000";
+    banner.remove();
+  };
+})();
 
     // --- Footer Year ---
     document.getElementById('year').textContent = new Date().getFullYear();
